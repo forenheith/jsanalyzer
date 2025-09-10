@@ -1,0 +1,16 @@
+[
+  {
+    "package": "dhtmlxScheduler",
+    "condition": "(?i)[\\\\/](?:jsplugins[\\\\/])?dhtmlxScheduler[\\\\/]|[\\\\/]dhtmlxscheduler[^\\\\/]*\\.js$",
+    "mainFilePattern": "(?i)[\\\\/]dhtmlxscheduler\\.js$",
+    "mainFileName": "dhtmlxscheduler.js",
+    "priority": 100
+  },
+  {
+    "package": "Kendo",
+    "condition": "(?i)(?:^|.*[\\\\/])kendo[\\\\/](?!.*[\\\\/](cultures|messages)[\\\\/]).*|(?:^|[\\\\/])kendo\\.(?:all|core|web|ui)(?:\\.min)?\\.js$",
+    "mainFilePattern": "(?i)[\\\\/]kendo\\.all(?:\\.min)?\\.js$",
+    "mainFileName": "kendo.all.min.js",
+    "priority": 90
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "dirPatterns": [
+    "(?i)[\\\\/](?:lang|locale|locales|i18n|i18next|l10n|nls|culture|cultures|messages|cldr)[\\\\/]"
+  ],
+  "filePatterns": [
+    "(?i)(?:^|[\\\\/])kendo\\.culture\\..+\\.js$",
+    "(?i)(?:^|[\\\\/])kendo\\.messages\\..+\\.js$"
+  ]
+}
