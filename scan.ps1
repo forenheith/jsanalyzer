@@ -1,10 +1,11 @@
 param(
   [string]$Root=".",
-  [string]$RulesPath="../config/rules.json",
-  [string]$ExcludesPath="../config/excludes.json",
+  [string]$RulesPath = (Join-Path $PSScriptRoot "config/rules.json"),
+  [string]$ExcludesPath = (Join-Path $PSScriptRoot "config/excludes.json"),
   [ValidateSet("table","json","csv")] [string]$Out="table",
-  [string]$CsvPath="./scan.csv"
+  [string]$CsvPath = (Join-Path $PSScriptRoot "scan.csv")
 )
+
 
 function Load-Json($path){if($path -match '^https?://'){(Invoke-WebRequest -Uri $path -UseBasicParsing).Content|ConvertFrom-Json}else{Get-Content $path -Raw|ConvertFrom-Json}}
 function MatchAny($s,$arr){foreach($p in $arr){if($s -imatch $p){return $true}}$false}
